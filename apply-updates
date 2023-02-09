@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+vim_patch_file="vim.patch"
+
+diff -Naur .vimrc ~/.vimrc > $vim_patch_file 
+patch -u ~/.vimrc -i $vim_patch_file
+rm -rf $vim_patch_file
+
