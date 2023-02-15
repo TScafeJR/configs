@@ -1,4 +1,7 @@
 set number
+set autochdir
+set wildmenu
+set wildmode=longest,list,full
 " vim-plug
 call plug#begin('~/.vim/plugged')
 " plugin section
