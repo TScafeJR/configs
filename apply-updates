@@ -1,8 +1,20 @@
 #!/usr/bin/env bash
 
 vim_patch_file="vim.patch"
+nvim_patch_file="nvim.patch"
 
-diff -Naur .vimrc ~/.vimrc > $vim_patch_file 
-patch -u ~/.vimrc -i $vim_patch_file
-rm -rf $vim_patch_file
+updateFile(){
+	diff -Naur $1 $2 > $3;
+	patch -u $2 -i $3;
+	rm -rf $3;
+}
+
+updateDir(){
+	diff -ruN $1 $2 > $3;
+	patch -s -p0 < $3;
+	rm -rf $3;
+}
+
+updateFile .vimrc ~/.vimrc $vim_patch_file
+updateDir nvim ~/.config/nvim $nvim_patch_file
 
