@@ -35,4 +35,8 @@ use {
   }
 }
 
+use('hrsh7th/nvim-compe')
+use('m4xshen/autoclose.nvim')
+use('f-person/git-blame.nvim')
+
 end)
