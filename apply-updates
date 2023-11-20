@@ -18,3 +18,4 @@ updateDir(){
 updateFile .vimrc ~/.vimrc $vim_patch_file
 updateDir nvim ~/.config/nvim $nvim_patch_file
 
+echo "Update Complete!"

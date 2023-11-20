@@ -38,6 +38,7 @@ use {
 use('hrsh7th/nvim-compe')
 use('m4xshen/autoclose.nvim')
 use('f-person/git-blame.nvim')
+use("folke/zen-mode.nvim")
 
 use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
 
@@ -46,6 +47,14 @@ use {
   config = function()
     require('nvim-test').setup()
   end
+}
+
+use 'nvim-tree/nvim-web-devicons' -- OPTIONAL: for file icons
+use 'romgrk/barbar.nvim'
+
+use {
+	'neoclide/coc.nvim',
+	 branch = 'release'
 }
 
 end)

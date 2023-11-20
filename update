@@ -3,3 +3,5 @@
 cp ~/.vimrc .
 cp -r ~/.config/nvim .
 rm -rf ./nvim/pack ./nvim/bundle
+
+echo "Update Complete!"

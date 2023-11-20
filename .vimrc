@@ -14,13 +14,15 @@ inoremap <silent><expr> <C-e>     compe#close('<C-e>')
 inoremap <silent><expr> <C-f>     compe#scroll({ 'delta': +4 })
 inoremap <silent><expr> <C-d>     compe#scroll({ 'delta': -4 })
 
-inoremap { {}<Esc>ha
-inoremap ( ()<Esc>ha
-inoremap [ []<Esc>ha
-inoremap " ""<Esc>ha
-inoremap ' ''<Esc>ha
-inoremap ` ``<Esc>ha
-inoremap < <><Esc>ha
+nnoremap <silent> gv :vsplit<CR>gd
+
+inoremap { {}<Left>
+inoremap ( ()<Left>
+inoremap [ []<Left>
+inoremap " ""<Left>
+inoremap ' ''<Left>
+inoremap ` ``<Left>
+inoremap < <><Left>
 
 " vim-plug
 call plug#begin('~/.vim/plugged')
@@ -30,7 +32,6 @@ Plug 'fatih/vim-go'
 Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
 Plug 'maxmellon/vim-jsx-pretty'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdtree'
 " end vim-plug
 call plug#end()
