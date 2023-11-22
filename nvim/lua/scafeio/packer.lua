@@ -23,8 +23,8 @@ use {
   branch = 'v3.x',
   requires = {
     --- Uncomment these if you want to manage LSP servers from neovim
-    -- {'williamboman/mason.nvim'},
-    -- {'williamboman/mason-lspconfig.nvim'},
+    {'williamboman/mason.nvim'},
+    {'williamboman/mason-lspconfig.nvim'},
 
     -- LSP Support
     {'neovim/nvim-lspconfig'},
@@ -56,5 +56,17 @@ use {
 	'neoclide/coc.nvim',
 	 branch = 'release'
 }
+
+use 'mfussenegger/nvim-dap'
+
+use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+
+use 'jose-elias-alvarez/null-ls.nvim'
+
+use 'folke/neodev.nvim' 
+
+use 'hrsh7th/vim-vsnip'
+
+use 'hrsh7th/vim-vsnip-integ'
 
 end)
