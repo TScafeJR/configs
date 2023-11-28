@@ -69,4 +69,8 @@ use 'hrsh7th/vim-vsnip'
 
 use 'hrsh7th/vim-vsnip-integ'
 
+use 'mfussenegger/nvim-lint'
+
+require('packer').use { 'mhartington/formatter.nvim' }
+
 end)
