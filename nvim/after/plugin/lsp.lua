@@ -1,4 +1,8 @@
+require("neodev").setup({})
+
 local lsp = require('lsp-zero')
+
+lsp.setup()
 
 lsp.preset("recommended")
 
@@ -26,8 +30,6 @@ lsp.on_attach(function(client, bufnr)
   vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end, opts)
   vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
 end)
-
-lsp.setup()
 
 vim.diagnostic.config({
     virtual_text = true
@@ -57,8 +59,9 @@ require("mason").setup({
     }
 })
 
-on_attach = function(client, bufnr)
-    if client.server_capabilities.inlayHintProvider then
-        vim.lsp.buf.inlay_hint(bufnr, true)
-    end
-	end
+require('mason-lspconfig').setup({
+  ensure_installed = {},
+  handlers = {
+    lsp.default_setup,
+  },
+})

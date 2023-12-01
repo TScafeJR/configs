@@ -5,6 +5,7 @@ set wildmode=longest,list,full
 set noexpandtab
 set tabstop=2
 set shiftwidth=2
+set nofixendofline
 " autocmd VimEnter * NERDTree | wincmd p
 " autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 
@@ -15,14 +16,6 @@ inoremap <silent><expr> <C-f>     compe#scroll({ 'delta': +4 })
 inoremap <silent><expr> <C-d>     compe#scroll({ 'delta': -4 })
 
 nnoremap <silent> gv :vsplit<CR>gd
-
-inoremap { {}<Left>
-inoremap ( ()<Left>
-inoremap [ []<Left>
-inoremap " ""<Left>
-inoremap ' ''<Left>
-inoremap ` ``<Left>
-inoremap < <><Left>
 
 " vim-plug
 call plug#begin('~/.vim/plugged')
